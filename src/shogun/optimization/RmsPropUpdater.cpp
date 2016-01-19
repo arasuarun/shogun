@@ -64,8 +64,8 @@ void RmsPropUpdater::set_epsilon(float64_t epsilon)
 
 void RmsPropUpdater::set_decay_factor(float64_t decay_factor)
 {
-	REQUIRE(decay_factor>=0.0 && decay_factor<1.0,
-		"decay factor (%f) must in [0,1)\n",
+	REQUIRE(decay_factor>=0.0 && decay_factor<=1.0,
+		"decay factor (%f) must in [0,1]\n",
 		decay_factor);
 	m_decay_factor=decay_factor;
 }
