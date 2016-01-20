@@ -58,6 +58,14 @@ class RmsPropUpdater: public DescendUpdaterWithCorrection
 public:
 	/* Constructor */
 	RmsPropUpdater();
+	
+	/** Parameterized Constructor
+	 *
+	 * @param learning_rate learning_rate
+	 * @param epsilon epsilon
+	 * @param decay_factor decay_factor
+	 */
+	RmsPropUpdater(float64_t learning_rate,float64_t epsilon,float64_t decay_factor);
 
 	/* Destructor */
 	virtual ~RmsPropUpdater();
